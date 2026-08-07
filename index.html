@@ -10,27 +10,27 @@
 <body>
     <main>
         <h1>TO-DO LIST</h1>
-        <div id="topicos">
-            <div id="esquerda">
+        <div class="topicos">
+            <div class="esquerda">
                 <div class="opcoes">
                     <h2>O QUE DESEJA FAZER?</h2>
-                    <h3>CADASTRAR NOVA TAREFA</h3>
-                    <h3>VISUALIZAR TAREFAS</h3>
-                    <h3>EDITAR TAREFAS</h3>
-                    <h3>EXCLUIR TAREFAS</h3>
+                    <h3 id="cadastrar_tarefa">CADASTRAR NOVA TAREFA</h3>
+                    <h3 id="visualizar_tarefas">VISUALIZAR TAREFAS</h3>
+                    <h3 id="editar_tarefas">EDITAR TAREFAS</h3>
+                    <h3 id="excluir_tarefas">EXCLUIR TAREFAS</h3>
                 </div>
 
-                <form action="" class="formulario">
+                <form action="" method="" class="formulario">
                     <div>
-                        <label for="">TÍTULO</label>
+                        <label for="titulo">TÍTULO</label><br>
                         <input type="text" id="titulo" name="titulo" placeholder="Título da tarefa" required>
                     </div>
                     <div>
-                        <label for="">DESCRIÇÃO</label>
+                        <label for="descricao">DESCRIÇÃO</label><br>
                         <input type="text" id="descricao" name="descricao" placeholder="Descrição da tarefa" required>
                     </div>
                     <div>
-                        <label for="">PRIORIDADE</label>
+                        <label for="prioridade">PRIORIDADE</label><br>
                         <select id="prioridade" name="prioridade">
                             <option value="baixa">Baixa</option>
                             <option value="media">Média</option>
@@ -40,13 +40,17 @@
                     <button type="submit" class="botao_form">CADASTRAR</button>
                 </form>
             </div>
-            <div id="direita">
+            
+            <div class="direita">
                 <h2>TAREFAS ATUAIS</h2>
-                <div class="tarefas_atuais">
-
+                <div id="agenda">
+                    <div id="tarefas_atuais">
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
