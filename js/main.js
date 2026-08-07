@@ -10,16 +10,12 @@ const excluirTarefa = document.getElementById("excluir_tarefa");
 const form = document.querySelector(".formulario");
 const agenda = document.getElementById("tarefas_atuais");
 
-form.addEventListener("submit", function(event){
+const caixaForm = document.querySelector(".caixa_form");
+
+cadastrarTarefa.addEventListener("click", function(event){
     event.preventDefault();
 
-    const tituloTarefa = document.getElementById("titulo").value;
-    const descricaoTarefa = document.getElementById("descricao").value;
-    const tarefaAtual = document.createElement("li");
-
-    tarefaAtual.textContent = tituloTarefa;
-
-    agenda.appendChild(tarefaAtual);
+    caixaForm.classList.toggle("ativa");
 });
 
 let visualizarAtivo = false;
@@ -50,29 +46,15 @@ visualizarTarefa.addEventListener("click", function(event){
 
 });
 
-let cadastrarAtivo = false;
-
-cadastrarTarefa.addEventListener("click", function(event){
-
+form.addEventListener("submit", function(event){
     event.preventDefault();
 
-    if(!cadastrarAtivo){
-        cadastrarTarefa.addEventListener("click", function(event){
-        event.preventDefault();
-        
-        esquerda.classList.add("mostrar_form");
+    const tituloTarefa = document.getElementById("titulo").value;
+    const descricaoTarefa = document.getElementById("descricao").value;
+    const tarefaAtual = document.createElement("li");
 
-        cadastrarAtivo = true;
-        });
-    }
+    tarefaAtual.textContent = tituloTarefa;
 
-    if(cadastrarAtivo){
-        cadastrarTarefa.addEventListener("click", function(event){
-        event.preventDefault();
-        
-        esquerda.classList.remove("mostrar_form");
-
-        cadastrarAtivo = false;
-        });
-    }
+    agenda.appendChild(tarefaAtual);
 });
+

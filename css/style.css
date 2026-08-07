@@ -43,6 +43,7 @@ h3{
     border-right: 4px solid #B84B87;
     cursor: pointer;
     width: 30em;
+    margin-bottom: 0;
 }
 .topicos{
     display: flex;
@@ -106,12 +107,15 @@ h3{
     padding: 10px;
     font-weight: bold;
 }
-.esquerda.mostrar_form .formulario{
-    flex: 1;
-    opacity: 1;
+.caixa_form_cadastrar{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
 }
-.esquerda.mostrar_form .formulario div, .esquerda.mostrar_form .formulario input, .esquerda.mostrar_form .formulario select, .esquerda.mostrar_form .formulario label{
+.caixa_form.ativa .caixa_form_cadastrar{
+    max-height: 500px;
     opacity: 1;
+    flex: 1;
 }
 .formulario{
     background-color: white;
@@ -126,7 +130,7 @@ h3{
     align-items: center;
     gap: 15px;
     flex: 0;
-    opacity: 0;
+    opacity: 1;
 }
 .formulario div {
     display: block;
@@ -145,6 +149,7 @@ h3{
     font-size: 14px;
 }
 .formulario div, .formulario input, .formulario select, .formulario label{
-    opacity: 0;
     transition: 0.5s;
 }
+
+
