@@ -151,5 +151,14 @@ h3{
 .formulario div, .formulario input, .formulario select, .formulario label{
     transition: 0.5s;
 }
+#agenda li{
+    color: rgb(255, 105, 192);
+    text-transform: uppercase;
+    margin-left: 30px;
+    font-weight: bold;
+}
+#agenda h2, #agenda h3{
+    font-size: 40px;
+}
 
 
