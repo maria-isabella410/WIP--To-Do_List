@@ -15,11 +15,11 @@
                 <div class="opcoes">
                     <h2>O QUE DESEJA FAZER?</h2>
 
-                    <div class="caixa_form">
+                    <div class="caixa_form_cad">
                         <h3 id="cadastrar_tarefa">CADASTRAR NOVA TAREFA</h3>
                         
                         <div class="caixa_form_cadastrar">
-                            <form action="" method="" class="formulario">
+                            <form action="" method="" class="formulario_cadastrar">
                                 <div>
                                     <label for="titulo">TÍTULO</label><br>
                                     <input type="text" id="titulo" name="titulo" placeholder="Título da tarefa" required>
@@ -40,9 +40,60 @@
                             </form>
                         </div>
                     </div>
+                    
                     <h3 id="visualizar_tarefas">VISUALIZAR TAREFAS</h3>
-                    <h3 id="editar_tarefas">EDITAR TAREFAS</h3>
-                    <h3 id="excluir_tarefas">EXCLUIR TAREFAS</h3>
+                    
+                    <div class="caixa_form_ed">
+                        <h3 id="editar_tarefas">EDITAR TAREFAS</h3>
+
+                        <div class="caixa_form_editar">
+                            <form action="" method="" class="formulario_editar">
+                                <div>
+                                    <label for="titulo">TÍTULO</label><br>
+                                    <input type="text" id="titulo" name="titulo" placeholder="Título da tarefa" required>
+                                </div>
+                                <div>
+                                    <label for="descricao">DESCRIÇÃO</label><br>
+                                    <input type="text" id="descricao" name="descricao" placeholder="Descrição da tarefa" required>
+                                </div>
+                                <div>
+                                    <label for="prioridade">PRIORIDADE</label><br>
+                                    <select id="prioridade" name="prioridade">
+                                        <option value="baixa">Baixa</option>
+                                        <option value="media">Média</option>
+                                        <option value="alta">Alta</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="botao_form">ATUALIZAR</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="caixa_form_ex">
+                        <h3 id="excluir_tarefas">EXCLUIR TAREFAS</h3>
+                        
+                        <div class="caixa_form_excluir">
+                            <form action="" method="" class="formulario_excluir">
+                                <div>
+                                    <label for="titulo">TÍTULO</label><br>
+                                    <input type="text" id="titulo" name="titulo" placeholder="Título da tarefa" required>
+                                </div>
+                                <div>
+                                    <label for="descricao">DESCRIÇÃO</label><br>
+                                    <input type="text" id="descricao" name="descricao" placeholder="Descrição da tarefa" required>
+                                </div>
+                                <div>
+                                    <label for="prioridade">PRIORIDADE</label><br>
+                                    <select id="prioridade" name="prioridade">
+                                        <option value="baixa">Baixa</option>
+                                        <option value="media">Média</option>
+                                        <option value="alta">Alta</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="botao_form">EXCLUIR</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
             

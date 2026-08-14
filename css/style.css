@@ -107,17 +107,27 @@ h3{
     padding: 10px;
     font-weight: bold;
 }
-.caixa_form_cadastrar{
+.caixa_form_cadastrar, .caixa_form_editar, .caixa_form_excluir{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
 }
-.caixa_form.ativa .caixa_form_cadastrar{
+.caixa_form_cad.ativa .caixa_form_cadastrar,
+.caixa_form_ed.ativa .caixa_form_editar,
+.caixa_form_ex.ativa .caixa_form_excluir
+{
     max-height: 500px;
     opacity: 1;
     flex: 1;
 }
-.formulario{
+.caixa_form_cad,
+.caixa_form_ed,
+.caixa_form_ex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario_cadastrar, .formulario_editar, .formulario_excluir{
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
     border-bottom: 4px solid #B84B87;
@@ -132,23 +142,27 @@ h3{
     flex: 0;
     opacity: 1;
 }
-.formulario div {
+.formulario_cadastrar div, .formulario_editar div, .formulario_excluir div{
     display: block;
     align-items: column;
     width: 100%;
 }
-.formulario input, .formulario select{
+.formulario_cadastrar select, .formulario_cadastrar input,
+.formulario_editar select, .formulario_editar input, 
+.formulario_excluir select, .formulario_excluir input{
     width: 100%;
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-.formulario label {
+.formulario_cadastrar label, .formulario_editar label, .formulario_excluir label{
     margin-bottom: 5px;
     font-size: 14px;
 }
-.formulario div, .formulario input, .formulario select, .formulario label{
+.formulario_cadastrar div, .formulario_cadastrar input, .formulario_cadastrar select, .formulario_cadastrar label,
+.formulario_editar div, .formulario_editar input, .formulario_editar select, .formulario_editar label,
+.formulario_excluir div, .formulario_excluir input, .formulario_excluir select, .formulario_excluir label{
     transition: 0.5s;
 }
 #agenda li{

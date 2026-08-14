@@ -7,15 +7,20 @@ const visualizarTarefa = document.getElementById("visualizar_tarefas");
 const editarTarefa = document.getElementById("editar_tarefa");
 const excluirTarefa = document.getElementById("excluir_tarefa");
 
-const form = document.querySelector(".formulario");
+const formCad = document.querySelector(".formulario_cadastrar");
+const formEd = document.querySelector(".formulario_editar");
+const formEx = document.querySelector(".formulario_excluir");
+
 const agenda = document.getElementById("tarefas_atuais");
 
-const caixaForm = document.querySelector(".caixa_form");
+const caixaFormCad = document.querySelector(".caixa_form_cad");
+const caixaFormEd = document.querySelector(".caixa_form_ed");
+const caixaFormEx = document.querySelector(".caixa_form_ex");
 
 cadastrarTarefa.addEventListener("click", function(event){
     event.preventDefault();
 
-    caixaForm.classList.toggle("ativa");
+    caixaFormCad.classList.toggle("ativa");
 });
 
 visualizarTarefa.addEventListener("click", function(event){
@@ -24,12 +29,24 @@ visualizarTarefa.addEventListener("click", function(event){
     topicos.classList.toggle("mostrar_agenda");
 });
 
-form.addEventListener("submit", function(event){
+editarTarefa.addEventListener("click", function(event){
     event.preventDefault();
 
-    const tituloTarefa = document.getElementById("titulo").value;
-    const descricaoTarefa = document.getElementById("descricao").value;
-    const prioridadeTarefa = document.getElementById("prioridade").value;
+    caixaFormEd.classList.toggle("ativa");
+});
+
+excluirTarefa.addEventListener("click", function(event){
+    event.preventDefault();
+
+    caixaFormEx.classList.toggle("ativa");
+});
+
+formCad.addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const tituloTarefa = formCad.querySelector("#titulo").value;
+    const descricaoTarefa = formCad.querySelector("#descricao").value;
+    const prioridadeTarefa = formCad.querySelector("#prioridade").value;
     const tarefaAtual = document.createElement("li");
 
     tarefaAtual.textContent = tituloTarefa;
