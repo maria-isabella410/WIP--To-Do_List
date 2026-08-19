@@ -4,7 +4,7 @@ body{
 main{
     background: linear-gradient(to bottom, rgba(255, 240, 248, 1), rgba(255, 224, 241, 1));
     width: 85vw;
-    height: 950px;
+    min-height: 930px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
