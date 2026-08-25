@@ -1,6 +1,8 @@
+let tarefas = [];
+
 const topicos = document.querySelector(".topicos");
 
-const esquerda = document.querySelector(".esquerda")
+const esquerda = document.querySelector(".esquerda");
 
 const cadastrarTarefa = document.getElementById("cadastrar_tarefa");
 const visualizarTarefa = document.getElementById("visualizar_tarefas");
@@ -65,45 +67,63 @@ formCad.addEventListener("submit", function(event){
     const tituloTarefa = document.getElementById("tituloCadastrar").value;
     const descricaoTarefa = document.getElementById("descricaoCadastrar").value;
     const prioridadeTarefa = document.getElementById("prioridadeCadastrar").value;
-    const tarefaAtual = document.createElement("li");
+    // const tarefaAtual = document.createElement("li");
 
-    tarefaAtual.textContent = tituloTarefa;
+    let tarefa = {
+        titulo: tituloTarefa,
+        descricao: descricaoTarefa,
+        prioridade: prioridadeTarefa,
+        concluida: false
+    };
 
-    agenda.appendChild(tarefaAtual);
+    tarefas.push(tarefa);
+    mostrarTarefa(tarefa);
+
+    // tarefaAtual.textContent = tituloTarefa;
+
+    // agenda.appendChild(tarefaAtual);
 });
 
 formEd.addEventListener("submit", function(event){
     event.preventDefault();
 
-    const tituloTarefa = document.getElementById("tituloEditar").value;
-    const descricaoTarefa = document.getElementById("descricaoEditar").value;
-    const prioridadeTarefa = document.getElementById("prioridadeEditar").value;
-    const tarefaAtual = document.createElement("li");
-
-    tarefaAtual.textContent = tituloTarefa;
-
-    agenda.appendChild(tarefaAtual);
 });
 
 formEx.addEventListener("submit", function(event){
     event.preventDefault();
 
-    const tituloTarefa = document.getElementById("tituloExcluir").value;
-    const descricaoTarefa = document.getElementById("descricaoExcluir").value;
-    const prioridadeTarefa = document.getElementById("prioridadeExcluir").value;
-    const tarefaAtual = document.createElement("li");
-
-    tarefaAtual.textContent = tituloTarefa;
-
-    agenda.appendChild(tarefaAtual);
 });
 
-// agenda.addEventListener("click", function(event){
-//     event.preventDefault();
+function mostrarTarefa(tarefa){
+    let tarefaAtual = document.createElement("div");
 
-//     const tituloInfoTarefa = document.createElement("h2");
-//     const descInfoTarefa = document.createElement("h2");
+    let titulo = document.createElement("li");
+    titulo.textContent = tarefa.titulo;
 
-//     //falta terminar isso
-// });
+    let botaoEditar = document.createElement("button");
+    botaoEditar.textContent = "✏️";
+
+    let botaoExcluir = document.createElement("button");
+    botaoExcluir.textContent = "🗑️";
+
+    let botaoConcluir = document.createElement("input");
+    botaoConcluir.type = "checkbox";
+    // botaoConcluir.textContent = "Concluir";
+
+    tarefaAtual.appendChild(titulo);
+    tarefaAtual.appendChild(botaoEditar);
+    tarefaAtual.appendChild(botaoExcluir);
+    tarefaAtual.appendChild(botaoConcluir);
+
+    agenda.appendChild(tarefaAtual);
+
+    botaoExcluir.addEventListener("click", function(){
+        tarefaAtual.remove();
+    })
+
+    botaoEditar.addEventListener("click", function(){
+
+    })
+}
+
 
