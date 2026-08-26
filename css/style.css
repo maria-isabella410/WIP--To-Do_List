@@ -1,8 +1,10 @@
 body{
-    background: linear-gradient(to bottom, rgba(255, 148, 209, 1), rgba(255, 105, 192, 1));
+    /* background: linear-gradient(to bottom, rgba(255, 148, 209, 1), rgba(255, 105, 192, 1)); */
+    background-color: #3f384c;
 }
 main{
-    background: linear-gradient(to bottom, rgba(255, 240, 248, 1), rgba(255, 224, 241, 1));
+    /* background: linear-gradient(to bottom, rgba(255, 240, 248, 1), rgba(255, 224, 241, 1)); */
+    background-color: #292335;
     width: 85vw;
     min-height: 930px;
     margin-left: auto;
@@ -10,16 +12,19 @@ main{
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
     overflow: hidden;
-    border: 4px solid #B84B87;
+    /* border: 4px solid #B84B87; */
+    border: 4px solid #110f17;
 }
 h1, h2, h3, label{
-    color: #B84B87;
+    /* color: #B84B87; */
+    color: #ffffff;
     font-weight: bold;
 }
 h1{
     text-align: center;
     font-size: 50px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 240, 248, 1));
+    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 240, 248, 1)); */
+    background: linear-gradient(to top, rgba(17, 15, 23, 1), rgba(33, 27, 46, 1));
     width: 100%;
     height: 2em;
     display: flex;
@@ -31,16 +36,20 @@ h1{
 h2{
     text-align: center;
     font-size: 30px;
-    border-bottom: 4px solid #B84B87;
+    /* border-bottom: 4px solid #B84B87; */
+    border-bottom: 4px solid #83769d;
     padding: 10px;
 }
 h3{
-    background-color: white;
+    background-color: #7c6f96;
+    background: linear-gradient(to right, rgba(17, 15, 23, 1), rgba(33, 27, 46, 1));
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
-    border-bottom: 4px solid #B84B87;
-    border-right: 4px solid #B84B87;
+    /* border-bottom: 4px solid #B84B87;
+    border-right: 4px solid #B84B87; */
+    border-bottom: 4px solid #110f17;
+    border-right: 4px solid #110f17; 
     cursor: pointer;
     width: 30em;
     margin-bottom: 0;
@@ -53,7 +62,7 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid #FF94D1;
+    /* border-right: 1px solid #FF94D1; */
     padding: 5%;
     flex: 1;
     margin-bottom: 200px;
@@ -63,7 +72,8 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-left: 1px solid #FF94D1;
+    /* border-left: 1px solid #FF94D1; */
+    border-left: 4px solid #83769d;
     flex: 0;
     opacity: 0;
     overflow: hidden;
@@ -84,50 +94,70 @@ h3{
     height: 600px;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
-    border-bottom: 4px solid #B84B87;
-    border-right: 4px solid #B84B87;
-    background-image: linear-gradient(#ffb7df 1px, transparent 1px);
+    border-bottom: 4px solid #110f17;
+    border-right: 4px solid #110f17; 
+    background-image: linear-gradient(#83769d 1px, transparent 1px);
     background-size: 100% 2.5rem;
     line-height: 2.5rem; 
     overflow: hidden;
 }
 .botao_form{
     color: white;
-    background-color: rgb(255, 105, 192);
+    /* background-color: rgb(255, 105, 192); */
+    background: linear-gradient(to bottom, rgba(131, 118, 157, 1), rgb(83, 75, 100));
     border-radius: 25px;
     padding: 10px;
     font-weight: bold;
     cursor: pointer;
     width: 50%;
+    transition: 0.3s;
 }
 .botao_form:hover{
     color: white;
-    background-color: rgb(209, 72, 152);
+    /* background-color: rgb(209, 72, 152); */
+    background: linear-gradient(to bottom, rgb(103, 92, 124), rgb(56, 51, 68));
     border-radius: 20px;
     padding: 10px;
     font-weight: bold;
+    transition: 0.3s;
 }
-.caixa_form_cadastrar, .caixa_form_editar, .caixa_form_excluir{
+/* .caixa_form_cadastrar, .caixa_form_editar, .caixa_form_excluir{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+} */
+.caixa_form_cadastrar{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s;
 }
-.caixa_form_cad.ativa .caixa_form_cadastrar,
+/* .caixa_form_cad.ativa .caixa_form_cadastrar,
 .caixa_form_ed.ativa .caixa_form_editar,
 .caixa_form_ex.ativa .caixa_form_excluir
 {
     max-height: 500px;
     opacity: 1;
     flex: 1;
+} */
+.caixa_form_cad.ativa .caixa_form_cadastrar
+{
+    max-height: 500px;
+    opacity: 1;
+    flex: 1;
 }
-.caixa_form_cad,
+/* .caixa_form_cad,
 .caixa_form_ed,
 .caixa_form_ex {
     display: flex;
     flex-direction: column;
     align-items: center;
+} */
+.caixa_form_cad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.formulario_cadastrar, .formulario_editar, .formulario_excluir{
+/* .formulario_cadastrar, .formulario_editar, .formulario_excluir{
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
     border-bottom: 4px solid #B84B87;
@@ -141,13 +171,36 @@ h3{
     gap: 15px;
     flex: 0;
     opacity: 1;
+} */
+.formulario_cadastrar{
+    /* background-color: white; */
+    background: linear-gradient(to right, rgba(17, 15, 23, 1), rgba(33, 27, 46, 1));
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
+    /* border-bottom: 4px solid #B84B87;
+    border-right: 4px solid #B84B87; */
+    border-bottom: 4px solid #110f17;
+    border-right: 4px solid #110f17; 
+    border-radius: 20px;
+    padding: 20px;
+    width: 35em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex: 0;
+    opacity: 1;
 }
-.formulario_cadastrar div, .formulario_editar div, .formulario_excluir div{
+/* .formulario_cadastrar div, .formulario_editar div, .formulario_excluir div{
+    display: block;
+    align-items: column;
+    width: 100%;
+} */
+.formulario_cadastrar div{
     display: block;
     align-items: column;
     width: 100%;
 }
-.formulario_cadastrar select, .formulario_cadastrar input,
+/* .formulario_cadastrar select, .formulario_cadastrar input,
 .formulario_editar select, .formulario_editar input, 
 .formulario_excluir select, .formulario_excluir input{
     width: 100%;
@@ -155,14 +208,39 @@ h3{
     border-radius: 8px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+} */
+.formulario_cadastrar select, .formulario_cadastrar input{
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: 0.3s;
 }
-.formulario_cadastrar label, .formulario_editar label, .formulario_excluir label{
+.formulario_cadastrar select:hover, .formulario_cadastrar input:hover{
+    background-color: #dcd7e4;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+/* .formulario_cadastrar label, .formulario_editar label, .formulario_excluir label{
+    margin-bottom: 5px;
+    font-size: 14px;
+} */
+.formulario_cadastrar label{
     margin-bottom: 5px;
     font-size: 14px;
 }
-.formulario_cadastrar div, .formulario_cadastrar input, .formulario_cadastrar select, .formulario_cadastrar label,
+/* .formulario_cadastrar div, .formulario_cadastrar input, .formulario_cadastrar select, .formulario_cadastrar label,
 .formulario_editar div, .formulario_editar input, .formulario_editar select, .formulario_editar label,
 .formulario_excluir div, .formulario_excluir input, .formulario_excluir select, .formulario_excluir label{
+    transition: 0.5s;
+} */
+.formulario_cadastrar div, .formulario_cadastrar input, .formulario_cadastrar select, .formulario_cadastrar label{
     transition: 0.5s;
 }
 #agenda li{

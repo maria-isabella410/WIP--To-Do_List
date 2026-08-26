@@ -6,23 +6,23 @@ const esquerda = document.querySelector(".esquerda");
 
 const cadastrarTarefa = document.getElementById("cadastrar_tarefa");
 const visualizarTarefa = document.getElementById("visualizar_tarefas");
-const editarTarefa = document.getElementById("editar_tarefas");
-const excluirTarefa = document.getElementById("excluir_tarefas");
+// const editarTarefa = document.getElementById("editar_tarefas");
+// const excluirTarefa = document.getElementById("excluir_tarefas");
 
 const formCad = document.querySelector(".formulario_cadastrar");
-const formEd = document.querySelector(".formulario_editar");
-const formEx = document.querySelector(".formulario_excluir");
+// const formEd = document.querySelector(".formulario_editar");
+// const formEx = document.querySelector(".formulario_excluir");
 
 const agenda = document.getElementById("tarefas_atuais");
 
 const caixaFormCad = document.querySelector(".caixa_form_cad");
-const caixaFormEd = document.querySelector(".caixa_form_ed");
-const caixaFormEx = document.querySelector(".caixa_form_ex");
+// const caixaFormEd = document.querySelector(".caixa_form_ed");
+// const caixaFormEx = document.querySelector(".caixa_form_ex");
 
 function fecharFormularios(){
     caixaFormCad.classList.remove("ativa");
-    caixaFormEd.classList.remove("ativa");
-    caixaFormEx.classList.remove("ativa");
+    // caixaFormEd.classList.remove("ativa");
+    // caixaFormEx.classList.remove("ativa");
 }
 
 cadastrarTarefa.addEventListener("click", function(event){
@@ -41,25 +41,25 @@ visualizarTarefa.addEventListener("click", function(event){
     topicos.classList.toggle("mostrar_agenda");
 });
 
-editarTarefa.addEventListener("click", function(event){
-    event.preventDefault();
+// editarTarefa.addEventListener("click", function(event){
+//     event.preventDefault();
 
-    const formAtivo = caixaFormEd.classList.contains("ativa");
+//     const formAtivo = caixaFormEd.classList.contains("ativa");
 
-    fecharFormularios();
+//     fecharFormularios();
 
-    if(!formAtivo) caixaFormEd.classList.add("ativa");
-});
+//     if(!formAtivo) caixaFormEd.classList.add("ativa");
+// });
 
-excluirTarefa.addEventListener("click", function(event){
-    event.preventDefault();
+// excluirTarefa.addEventListener("click", function(event){
+//     event.preventDefault();
 
-    const formAtivo = caixaFormEx.classList.contains("ativa");
+//     const formAtivo = caixaFormEx.classList.contains("ativa");
 
-    fecharFormularios();
+//     fecharFormularios();
 
-    if(!formAtivo) caixaFormEx.classList.add("ativa");
-});
+//     if(!formAtivo) caixaFormEx.classList.add("ativa");
+// });
 
 formCad.addEventListener("submit", function(event){
     event.preventDefault();
@@ -84,15 +84,15 @@ formCad.addEventListener("submit", function(event){
     // agenda.appendChild(tarefaAtual);
 });
 
-formEd.addEventListener("submit", function(event){
-    event.preventDefault();
+// formEd.addEventListener("submit", function(event){
+//     event.preventDefault();
 
-});
+// });
 
-formEx.addEventListener("submit", function(event){
-    event.preventDefault();
+// formEx.addEventListener("submit", function(event){
+//     event.preventDefault();
 
-});
+// });
 
 function mostrarTarefa(tarefa){
     let tarefaAtual = document.createElement("div");
@@ -106,9 +106,8 @@ function mostrarTarefa(tarefa){
     let botaoExcluir = document.createElement("button");
     botaoExcluir.textContent = "🗑️";
 
-    let botaoConcluir = document.createElement("input");
-    botaoConcluir.type = "checkbox";
-    // botaoConcluir.textContent = "Concluir";
+    let botaoConcluir = document.createElement("button");
+    botaoConcluir.textContent = "✅";
 
     tarefaAtual.appendChild(titulo);
     tarefaAtual.appendChild(botaoEditar);
@@ -117,8 +116,8 @@ function mostrarTarefa(tarefa){
 
     agenda.appendChild(tarefaAtual);
 
-    botaoExcluir.addEventListener("click", function(){
-        tarefaAtual.remove();
+    botaoExcluir.addEventListener("click", function(tarefa){
+        tarefaAtual.remove(tarefa);
     })
 
     botaoEditar.addEventListener("click", function(){
