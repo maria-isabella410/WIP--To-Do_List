@@ -66,7 +66,7 @@ h3{
     padding: 5%;
     flex: 1;
     margin-bottom: 200px;
-    max-height: 150vh;
+    max-height: 100vh;
 }
 .direita{
     display: flex;
@@ -87,19 +87,6 @@ h3{
 .topicos.mostrar_agenda .direita{
     flex: 1;
     opacity: 1;
-}
-#agenda{
-    background-color: white;
-    width: 40em;
-    height: 600px;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
-    border-bottom: 4px solid #110f17;
-    border-right: 4px solid #110f17; 
-    background-image: linear-gradient(#83769d 1px, transparent 1px);
-    background-size: 100% 2.5rem;
-    line-height: 2.5rem; 
-    overflow: hidden;
 }
 .botao_form{
     color: white;
@@ -243,14 +230,74 @@ h3{
 .formulario_cadastrar div, .formulario_cadastrar input, .formulario_cadastrar select, .formulario_cadastrar label{
     transition: 0.5s;
 }
-#agenda li{
-    color: rgb(255, 105, 192);
+/* #agenda li{
+    color: rgb(33, 27, 46);
     text-transform: uppercase;
     margin-left: 30px;
     font-weight: bold;
+} */
+#agenda{
+    background-color: white;
+    width: 40em;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.30);
+    border-bottom: 4px solid #110f17;
+    border-right: 4px solid #110f17; 
+    background-image: linear-gradient(#83769d 1px, transparent 1px);
+    background-size: 100% 2.5rem;
+    line-height: 2.5rem; 
+    overflow-y: auto;
 }
-#agenda h2, #agenda h3{
-    font-size: 40px;
+.tarefa {
+    min-height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    color: rgb(33, 27, 46);
+}
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 30px;
+}
+.informacoes li{
+    margin: 0;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.informacoes p{
+    margin: 0;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+.lado_direito{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-right: 30px;
+    text-transform: uppercase;
+}
+.botoes{
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.prioridade {
+    margin: 0;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
 }
 
 
